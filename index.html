@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Boostrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
@@ -48,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/me.JPG" alt="Permana Kusuma " width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Permana Kusuma</h1>
-      <p class="lead">Mahasiswa | Universitas Gunadarma</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffff"
@@ -61,7 +64,7 @@
 
     <!-- About -->
     <section id="about">
-      <div class="container">
+      <div class="container" data-aos="fade-down" data-aos-offset="300">
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
@@ -69,10 +72,10 @@
         </div>
       </div>
       <div class="row justify-content-center fs-5 text-center">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-down-right" data-aos-duration="1000" data-aos-offset="300">
           <p>Halo, saya adalah seorang mahasiswa dari Universitas Gunadarma cita-cita saya ingin menjadi seorang web developer profesional di masa depan nanti</p>
         </div>
-        <div class="col-md-4">Karena hal itu, saya mulai mempelajari tentang web developer melalui youtube atau yang lainnya untuk menuju cita-cita saya</div>
+        <div class="col-md-4" data-aos="fade-down-left" data-aos-duration="1000" data-aos-offset="300">Karena hal itu, saya mulai mempelajari tentang web developer melalui youtube atau yang lainnya untuk menuju cita-cita saya</div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -94,7 +97,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-5 mb-4">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1000">
               <img src="img/uph.jpg" class="card-img-top" alt="edu1" />
               <div class="card-body">
                 <p class="card-text text-center">Sekolah Pelita Harapan</p>
@@ -103,7 +106,7 @@
             </div>
           </div>
           <div class="col-md-5 mb-4">
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
               <img src="img/itb.jpg" class="card-img-top" alt="edu2" />
               <div class="card-body">
                 <p class="card-text text-center">Institut Teknologi Bandung</p>
@@ -167,5 +170,20 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 2, text: "Mahasiswa | Universitas Gunadarma" });
+      gsap.from(".jumbotron img", { duration: 1.5, y: "-100%", opacity: 0, delay: 0.5, ease: "expo" });
+      gsap.from(".navbar", { duration: 1, y: "-100%", opacity: 0, ease: "slow" });
+      gsap.from(".display-4", { duration: 1, x: "-100%", opacity: 0, delay: 1, ease: "back" });
+    </script>
   </body>
 </html>
